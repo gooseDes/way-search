@@ -1,0 +1,10 @@
+[package]
+name = "webview_overlay"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gdk = "0.18"
+gtk = "0.18"
+gtk-layer-shell = "0.8.2"
+webkit2gtk = "2.0.2"
