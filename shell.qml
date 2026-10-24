@@ -9,7 +9,7 @@ import QtQuick.Effects
 PanelWindow {
     id: root
 
-    WlrLayershell.namespace: "cts"
+    WlrLayershell.namespace: "way-search"
 
     property string screenshotPath: ""
     property int searchNum: 0
