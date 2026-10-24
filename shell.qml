@@ -310,17 +310,36 @@ PanelWindow {
             fadeIn.restart()
     }
 
-    Shape {
+    Item {
         anchors.fill: parent
 
-        ShapePath {
-            strokeWidth: 4
-            strokeColor: "lightgreen"
-            fillColor: "transparent"
+        Shape {
+            id: drawing
+            anchors.fill: parent
 
-            PathPolyline {
-                path: root.pointsList
+            ShapePath {
+                strokeWidth: 4
+                strokeColor: "lightgreen"
+                fillColor: "transparent"
+
+                PathPolyline {
+                    path: root.pointsList
+                }
             }
+        }
+
+        MultiEffect {
+            anchors.fill: parent
+            source: drawing
+
+            blurEnabled: true
+            blur: 0.7
+            blurMax: 32
+
+            colorization: 1.0
+            colorizationColor: "#fff"
+
+            opacity: 0.9
         }
     }
 
